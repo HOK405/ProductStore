@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj": {}
+  },
+  "projects": {
+    "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj",
+        "projectName": "ProductsStorage.Tests",
+        "projectPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj",
+        "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
+        "outputPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductsStorage.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Visual Studio\\Packages\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\boghd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj": {
+                "projectPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
