@@ -6384,11 +6384,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
+      "projectUniqueName": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
       "projectName": "ProductStorage.DAL",
-      "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
+      "projectPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
       "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\obj\\",
+      "outputPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio\\Packages\\NuGetPackages"

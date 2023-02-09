@@ -5412,11 +5412,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
+      "projectUniqueName": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
       "projectName": "ConsoleOutput_WebApi",
-      "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
+      "projectPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
       "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\obj\\",
+      "outputPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ConsoleOutput_WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio\\Packages\\NuGetPackages"

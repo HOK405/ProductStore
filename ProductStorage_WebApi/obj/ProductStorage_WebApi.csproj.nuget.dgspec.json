@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj": {}
+    "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj": {
+    "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\ProductStorage.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
+        "projectUniqueName": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
         "projectName": "ProductStorage.DAL",
-        "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
+        "projectPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
         "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\obj\\",
+        "outputPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio\\Packages\\NuGetPackages"
@@ -89,14 +89,14 @@
         }
       }
     },
-    "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj": {
+    "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.Service\\ProductStorage.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj",
+        "projectUniqueName": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.Service\\ProductStorage.Service.csproj",
         "projectName": "ProductStorage.Service",
-        "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj",
+        "projectPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.Service\\ProductStorage.Service.csproj",
         "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\obj\\",
+        "outputPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio\\Packages\\NuGetPackages"
@@ -117,8 +117,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj": {
-                "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj"
+              "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\ProductStorage.DAL.csproj": {
+                "projectPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\ProductStorage.DAL.csproj"
               }
             }
           }
@@ -158,14 +158,14 @@
         }
       }
     },
-    "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj": {
+    "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj",
+        "projectUniqueName": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj",
         "projectName": "ProductStorage_WebApi",
-        "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj",
+        "projectPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj",
         "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage_WebApi\\obj\\",
+        "outputPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage_WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio\\Packages\\NuGetPackages"
@@ -186,8 +186,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj": {
-                "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj"
+              "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.Service\\ProductStorage.Service.csproj": {
+                "projectPath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.Service\\ProductStorage.Service.csproj"
               }
             }
           }

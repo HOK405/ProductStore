@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LGSI9fDABQ3lNU9iwVpIAx6FupcGEUYdItHmA/iXrnyUkR+V4aRdfZaBOuYAdg/vtpsUGAZdCOTPpN5YWLAnzQ==",
+  "dgSpecHash": "NSutdxJIs5enMQizBxV1ylLDVoGEFpcOqtIiO44SGXcFYkhLwBWgAqPtL3ZjUduPgIM7jeZKKbga90J5qu/T7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Tests\\ProductStorage.Tests.csproj",
+  "projectFilePath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.Tests\\ProductStorage.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\boghd\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

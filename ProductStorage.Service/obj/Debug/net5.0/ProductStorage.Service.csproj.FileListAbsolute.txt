@@ -34,3 +34,21 @@ C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\refi
 C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.pdb
 C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.genruntimeconfig.cache
 C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ref\ProductStorage.Service.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.deps.json
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.runtimeconfig.json
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.runtimeconfig.dev.json
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.pdb
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.DAL.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.DAL.pdb
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.csproj.AssemblyReference.cache
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.AssemblyInfoInputs.cache
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.AssemblyInfo.cs
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.csproj.CoreCompileInputs.cache
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.csproj.CopyComplete
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\refint\ProductStorage.Service.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.pdb
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.genruntimeconfig.cache
+D:\Project\Visual Studio\ProductStoragePetProject\ProductStorage.Service\obj\Debug\net5.0\ref\ProductStorage.Service.dll

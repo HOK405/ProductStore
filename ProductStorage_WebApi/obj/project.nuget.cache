@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "leUdRp7rkSkizDHpCxiccCvilTQOh8nVHv9TvJ514lhSnmgW3Ocacj1AMiotKeGVlwS1/J07UwAAHG2zDoCssA==",
+  "dgSpecHash": "0P3AdDVQ51nFJt5/XaiPcJC8sTGzbnS466XGy2QDkNM89sXPSOzqOgDzk/CHfcXDCvEnUMJA6MwgM7SJCKt98Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj",
+  "projectFilePath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\boghd\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

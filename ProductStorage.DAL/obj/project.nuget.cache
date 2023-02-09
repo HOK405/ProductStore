@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oSB/xpxI/JEvD82LMU2KEgpP19DiiITY0rmj/j8TFbBMAPtHhO/H+y5d4FGAiUYSpKGIz9QkXcfN/NkAoOsb4w==",
+  "dgSpecHash": "Gw7JWfZQp8ItOwJDq60WmMGbpgBu5jg3/Juz7+I8qatyUGICWGGmcRkldgVOFuOJ0TxD+EKlR/Vq2cOaVKdvgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
+  "projectFilePath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\boghd\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

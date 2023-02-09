@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dOyiumLGhgsgUbTE0PzQjTnZrieXPzL+MHkbmLfEwn2A4YYzn7qXm+YYBtMuRXn4HZJYBKSuOrJ+P2E9GnxDiQ==",
+  "dgSpecHash": "2zewlG+ZlBjap0SzxRq+k/P4NjVZtK9WD90Z0cW6ntgFC4VstWdkc1Dk3xS8m6RkRMrHNTCjupM1FhItkobpIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
+  "projectFilePath": "D:\\Project\\Visual Studio\\ProductStoragePetProject\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\boghd\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",

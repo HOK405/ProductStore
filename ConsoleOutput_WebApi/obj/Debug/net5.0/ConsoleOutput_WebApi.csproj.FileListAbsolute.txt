@@ -18,3 +18,23 @@ D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ConsoleOutput_WebApi\obj\Debug\net5
 D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.pdb
 D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.genruntimeconfig.cache
 D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ConsoleOutput_WebApi\obj\Debug\net5.0\ref\ConsoleOutput_WebApi.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\bin\Debug\net5.0\ConsoleOutput_WebApi.exe
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\bin\Debug\net5.0\ConsoleOutput_WebApi.deps.json
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\bin\Debug\net5.0\ConsoleOutput_WebApi.runtimeconfig.json
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\bin\Debug\net5.0\ConsoleOutput_WebApi.runtimeconfig.dev.json
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\bin\Debug\net5.0\ConsoleOutput_WebApi.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\bin\Debug\net5.0\ConsoleOutput_WebApi.pdb
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.csproj.AssemblyReference.cache
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.AssemblyInfoInputs.cache
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.AssemblyInfo.cs
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.csproj.CoreCompileInputs.cache
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.csproj.CopyComplete
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\refint\ConsoleOutput_WebApi.dll
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.pdb
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ConsoleOutput_WebApi.genruntimeconfig.cache
+D:\Project\Visual Studio\ProductStoragePetProject\ConsoleOutput_WebApi\obj\Debug\net5.0\ref\ConsoleOutput_WebApi.dll
