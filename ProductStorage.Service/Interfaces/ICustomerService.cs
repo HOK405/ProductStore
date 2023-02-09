@@ -6,21 +6,22 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProductStorage.Service.Models.Customer;
 
 namespace ProductStorage.Service.Interfaces
 {
     public interface ICustomerService
     {
-        Task<IBaseResponse<IEnumerable<Customer>>> GetCustomers();
+        Task<IBaseResponse<IEnumerable<CustomerModel>>> GetCustomers();
 
-        Task<IBaseResponse<Customer>> GetById(int id);
+        Task<IBaseResponse<CustomerModel>> GetById(int id);
 
-        Task<IBaseResponse<Customer>> GetByName(string Name);
+        Task<IBaseResponse<CustomerModel>> GetByName(string name);
 
         Task<IBaseResponse<bool>> Delete(int id);
 
-        Task<IBaseResponse<bool>> Create(Customer customer);
+        Task<IBaseResponse<bool>> Create(CustomerModel customer);
 
-        Task<IBaseResponse<bool>> Update(int id, Customer newCustomer);
+        Task<IBaseResponse<bool>> Update(int id, CustomerModel newCustomer);
     }
 }

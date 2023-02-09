@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "r6rs/gyGe25Aka+AL1F5yMaAfIR+Rfb1TT7hkMVMjpYnxSrTvFec5zyfdBV5WEmewPuZBhcathDQ3q88i3T8+A==",
+  "dgSpecHash": "4nsUzpysX6rA2Zfr0VufuqOIhFS1jj6pUCQ2YFZvgOsTaCtobINNna/Ry084GDufUbZRsq6uCTLU8BdYKN5RMg==",
   "success": true,
   "projectFilePath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Tests\\ProductStorage.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\boghd\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

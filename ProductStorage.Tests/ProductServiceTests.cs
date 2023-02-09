@@ -2,17 +2,17 @@
 using ProductStorage.DAL.Entities;
 using ProductStorage.DAL.Interfaces;
 using ProductStorage.Service.Implementations;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using ProductStorage.Service.Models.Product;
 using Xunit;
 
 namespace ProductStorage.Tests
 {
     public class ProductServiceTests
     {
+        const int ProductId = 1;
         private readonly ProductService _sut;
         private readonly Mock<IUnitOfWork> _unitOfWorkMock = new Mock<IUnitOfWork>();
 
@@ -25,17 +25,18 @@ namespace ProductStorage.Tests
         public async Task Create_ShouldReturnTrue_WhenPassedDataIsOk()
         {
             // Arrange
-            var productMock = new Product()
+            var productModelMock = new ProductModel()
             {
                 ProductId = 1,
                 Name = "TestProduct",
                 Amount = 1
             };
+            
             _unitOfWorkMock.Setup(x => x.Products.Create(It.IsAny<Product>()))
                             .ReturnsAsync(true);
 
             //  Act
-            var flag = await _sut.Create(productMock);
+            var flag = await _sut.Create(productModelMock);
 
             // Assert
             Assert.True(flag.Data);
@@ -60,18 +61,17 @@ namespace ProductStorage.Tests
         public async Task Update_ShouldReturnTrue_WhenProductExists()
         {
             // Arrange
-            var productID = 1;
 
             var customerMock = new Product()
             {
-                ProductId = productID,
+                ProductId = ProductId,
                 Name = "Tester",
                 Amount = 1
             };
 
-            var newProductMock = new Product()
+            var newProductModelMock = new ProductModel()
             {
-                ProductId = productID,
+                ProductId = ProductId,
                 Name = "Tester2",
                 Amount = 2
             };
@@ -79,10 +79,10 @@ namespace ProductStorage.Tests
             _unitOfWorkMock.Setup(x => x.Products.GetById(1))
                                             .ReturnsAsync(customerMock);
 
-            _unitOfWorkMock.Setup(x => x.Products.Update(productID, newProductMock))
+            _unitOfWorkMock.Setup(x => x.Products.Update(ProductId, It.IsAny<Product>()))
                                    .ReturnsAsync(true);
             // Act
-            var flag = await _sut.Update(productID, newProductMock);
+            var flag = await _sut.Update(ProductId, newProductModelMock);
 
             // Assert
             Assert.True(flag.Data);
@@ -92,24 +92,20 @@ namespace ProductStorage.Tests
         public async Task Update_ShouldReturnFalse_WhenNewProductIsNull()
         {
             // Arrange
-            var productID = 1;
-
             var productMock = new Product()
             {
-                ProductId = productID,
+                ProductId = ProductId,
                 Name = "Tester",
                 Amount = 1
             };
 
-            var newCustomerMock = new Product();
-
-            _unitOfWorkMock.Setup(x => x.Products.GetById(productID))
+            _unitOfWorkMock.Setup(x => x.Products.GetById(ProductId))
                                             .ReturnsAsync(productMock);
 
-            _unitOfWorkMock.Setup(x => x.Products.Update(productID, null))
+            _unitOfWorkMock.Setup(x => x.Products.Update(ProductId, null))
                                    .ReturnsAsync(false);
             // Act
-            var flag = await _sut.Update(productID, null);
+            var flag = await _sut.Update(ProductId, null);
 
             // Assert
             Assert.False(flag.Data);
@@ -119,11 +115,16 @@ namespace ProductStorage.Tests
         public async Task Update_ShouldReturnFalse_WhenCustomerIsNull()
         {
             // Arrange
-            var productID = 1;
-
             var newProductMock = new Product()
             {
-                ProductId = productID,
+                ProductId = ProductId,
+                Name = "Tester",
+                Amount = 1
+            };
+            
+            var newProductModelMock = new ProductModel()
+            {
+                ProductId = ProductId,
                 Name = "Tester",
                 Amount = 1
             };
@@ -134,7 +135,7 @@ namespace ProductStorage.Tests
             _unitOfWorkMock.Setup(x => x.Products.Update(It.IsAny<int>(), newProductMock))
                                    .ReturnsAsync(false);
             // Act
-            var flag = await _sut.Update(productID, newProductMock);
+            var flag = await _sut.Update(ProductId, newProductModelMock);
 
             // Assert
             Assert.False(flag.Data);
@@ -144,22 +145,20 @@ namespace ProductStorage.Tests
         public async Task Delete_ShouldReturnTrue_WhenProductExists()
         {
             // Arrange
-            var productID = 1;
-
             var productMock = new Product()
             {
-                ProductId = productID,
+                ProductId = ProductId,
                 Name = "TestProduct",
                 Amount = 1
             };
 
-            _unitOfWorkMock.Setup(x => x.Products.GetById(productID))
+            _unitOfWorkMock.Setup(x => x.Products.GetById(ProductId))
                                             .ReturnsAsync(productMock);
 
             _unitOfWorkMock.Setup(x => x.Products.Delete(productMock))
                                                .ReturnsAsync(true);
             // Act
-            var flag = await _sut.Delete(productID);
+            var flag = await _sut.Delete(ProductId);
             //Assert
             Assert.True(flag.Data);
         }
@@ -168,8 +167,6 @@ namespace ProductStorage.Tests
         public async Task Delete_ShouldReturnFalse_WhenCustomerDoesNotExist()
         {
             // Arrange
-            var productID = 1;
-
             var productMock = new Product();
 
             _unitOfWorkMock.Setup(x => x.Products.GetById(It.IsAny<int>()))
@@ -178,7 +175,7 @@ namespace ProductStorage.Tests
             _unitOfWorkMock.Setup(x => x.Products.Delete(productMock))
                                                .ReturnsAsync(false);
             // Act
-            var flag = await _sut.Delete(productID);
+            var flag = await _sut.Delete(ProductId);
             //Assert
             Assert.False(flag.Data);
         }
@@ -187,22 +184,21 @@ namespace ProductStorage.Tests
         public async Task GetById_ShouldReturnProduct_WhenProductExists()
         {
             // Arrange
-            var productID = 1;
             var productMock = new Product()
             {
-                ProductId = productID,
+                ProductId = ProductId,
                 Name = "Lamp",
                 Amount = 15
             };
 
-            _unitOfWorkMock.Setup(x => x.Products.GetById(productID))
+            _unitOfWorkMock.Setup(x => x.Products.GetById(ProductId))
                 .ReturnsAsync(productMock);
 
             // Act
-            var product = await _sut.GetById(productID);
+            var product = await _sut.GetById(ProductId);
 
             //Assert
-            Assert.Equal(productID, product.Data.ProductId);
+            Assert.Equal(ProductId, product.Data.ProductId);
         }
 
         [Fact]

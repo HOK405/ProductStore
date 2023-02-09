@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2tzwiDf5Aul9d4ub1OKNwj1XdYslp2Konu7BMzHqtf6iCzmdDCO9BlSwbgyk4QFMdpFAd46VFtTD7U2m+hlJ9A==",
+  "dgSpecHash": "oDMmFIkYCGrbffb0oFtkJKID4jzXWjulYnKqVtkehPe/txpzssRIm4V5d41Yd7lkzfUu3hSzIDmU6+Q9rfOFeg==",
   "success": true,
   "projectFilePath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage_WebApi\\ProductStorage_WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\boghd\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

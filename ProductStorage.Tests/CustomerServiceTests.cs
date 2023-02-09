@@ -1,17 +1,10 @@
-using Castle.Core.Resource;
 using Moq;
-using ProductStorage.DAL.EF;
 using ProductStorage.DAL.Entities;
 using ProductStorage.DAL.Interfaces;
-using ProductStorage.DAL.Repositories;
 using ProductStorage.Service.Implementations;
-using ProductStorage.Service.Interfaces;
-using ProductStorage.Service.Response;
-using System;
+using ProductStorage.Service.Models.Customer;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -19,6 +12,7 @@ namespace ProductStorage.Tests
 {
     public class CustomerServiceTests
     {
+        const int CustomerId = 1;
         private readonly CustomerService _sut;
         private readonly Mock<IUnitOfWork> _unitOfWorkMock = new Mock<IUnitOfWork>();
 
@@ -31,7 +25,7 @@ namespace ProductStorage.Tests
         public async Task Create_ShouldReturnTrue_WhenPassedDataIsOk()
         {
             // Arrange
-            var customerMock = new Customer()
+            var customerMock = new CustomerModel()
             {
                 CustomerID = 1,
                 Name = "Tester",
@@ -66,22 +60,21 @@ namespace ProductStorage.Tests
         public async Task Delete_ShouldReturnTrue_WhenCustomerExists()
         {
             // Arrange
-            var customerID = 1;
 
             var customerMock = new Customer()
             {
-                CustomerID = customerID,
+                CustomerID = CustomerId,
                 Name = "Tester",
                 Phone = "111"
             };
 
-            _unitOfWorkMock.Setup(x => x.Customers.GetById(customerID))
+            _unitOfWorkMock.Setup(x => x.Customers.GetById(CustomerId))
                                             .ReturnsAsync(customerMock);
 
             _unitOfWorkMock.Setup(x => x.Customers.Delete(customerMock))
                                                .ReturnsAsync(true);
             // Act
-            var flag = await _sut.Delete(customerID);
+            var flag = await _sut.Delete(CustomerId);
             //Assert
             Assert.True(flag.Data);
         }
@@ -90,8 +83,6 @@ namespace ProductStorage.Tests
         public async Task Delete_ShouldReturnFalse_WhenCustomerDoesNotExist()
         {
             // Arrange
-            var customerID = 1;
-
             var customerMock = new Customer();
 
             _unitOfWorkMock.Setup(x => x.Customers.GetById(It.IsAny<int>()))
@@ -100,7 +91,7 @@ namespace ProductStorage.Tests
             _unitOfWorkMock.Setup(x => x.Customers.Delete(customerMock))
                                                .ReturnsAsync(false);
             // Act
-            var flag = await _sut.Delete(customerID);
+            var flag = await _sut.Delete(CustomerId);
             //Assert
             Assert.False(flag.Data);
         }
@@ -109,29 +100,27 @@ namespace ProductStorage.Tests
         public async Task Update_ShouldReturnTrue_WhenCustomerExists()
         {
             // Arrange
-            var customerID = 1;
-
             var customerMock = new Customer()
             {
-                CustomerID = customerID,
+                CustomerID = CustomerId,
                 Name = "Tester",
                 Phone = "111"
             };
-
-            var newCustomerMock = new Customer()
+            
+            var newCustomerModelMock = new CustomerModel()
             {
-                CustomerID = customerID,
+                CustomerID = CustomerId,
                 Name = "Tester",
                 Phone = "222"
             };
 
-            _unitOfWorkMock.Setup(x => x.Customers.GetById(customerID))
+            _unitOfWorkMock.Setup(x => x.Customers.GetById(CustomerId))
                                             .ReturnsAsync(customerMock);
 
-            _unitOfWorkMock.Setup(x => x.Customers.Update(customerID, newCustomerMock))
+            _unitOfWorkMock.Setup(x => x.Customers.Update(CustomerId, It.IsAny<Customer>()))
                                    .ReturnsAsync(true);
             // Act
-            var flag = await _sut.Update(customerID, newCustomerMock);
+            var flag = await _sut.Update(CustomerId, newCustomerModelMock);
 
             // Assert
             Assert.True(flag.Data);
@@ -141,24 +130,20 @@ namespace ProductStorage.Tests
         public async Task Update_ShouldReturnFalse_WhenNewCustomerIsNull()
         {
             // Arrange
-            var customerID = 1;
-
             var customerMock = new Customer()
             {
-                CustomerID = customerID,
+                CustomerID = CustomerId,
                 Name = "Tester",
                 Phone = "111"
             };
 
-            var newCustomerMock = new Customer();
-
-            _unitOfWorkMock.Setup(x => x.Customers.GetById(customerID))
+            _unitOfWorkMock.Setup(x => x.Customers.GetById(CustomerId))
                                             .ReturnsAsync(customerMock);
 
-            _unitOfWorkMock.Setup(x => x.Customers.Update(customerID, null))
+            _unitOfWorkMock.Setup(x => x.Customers.Update(CustomerId, null))
                                    .ReturnsAsync(false);
             // Act
-            var flag = await _sut.Update(customerID, null);
+            var flag = await _sut.Update(CustomerId, null);
 
             // Assert
             Assert.False(flag.Data);
@@ -168,13 +153,18 @@ namespace ProductStorage.Tests
         public async Task Update_ShouldReturnFalse_WhenCustomerIsNull()
         {
             // Arrange
-            var customerID = 1;
-
             var newCustomerMock = new Customer()
             {
-                CustomerID = customerID,
+                CustomerID = CustomerId,
                 Name = "Tester",
-                Phone = "111"
+                Phone = "222"
+            };
+            
+            var newCustomerModelMock = new CustomerModel()
+            {
+                CustomerID = CustomerId,
+                Name = "Tester",
+                Phone = "222"
             };
 
             _unitOfWorkMock.Setup(x => x.Customers.GetById(It.IsAny<int>()))
@@ -183,7 +173,7 @@ namespace ProductStorage.Tests
             _unitOfWorkMock.Setup(x => x.Customers.Update(It.IsAny<int>(), newCustomerMock))
                                    .ReturnsAsync(false);
             // Act
-            var flag = await _sut.Update(customerID, newCustomerMock);
+            var flag = await _sut.Update(CustomerId, newCustomerModelMock);
 
             // Assert
             Assert.False(flag.Data);
@@ -230,22 +220,21 @@ namespace ProductStorage.Tests
         public async Task GetById_ShouldReturnCustomer_WhenCustomerExists()
         {
             // Arrange
-            var customerID = 1;
             var customerMock = new Customer()
             {
-                CustomerID = customerID,
+                CustomerID = CustomerId,
                 Name = "Tester",
                 Phone = "111"
             };
 
-            _unitOfWorkMock.Setup(x => x.Customers.GetById(customerID))
+            _unitOfWorkMock.Setup(x => x.Customers.GetById(CustomerId))
                 .ReturnsAsync(customerMock);
 
             // Act
-            var customer = await _sut.GetById(customerID);
+            var customer = await _sut.GetById(CustomerId);
 
             //Assert
-            Assert.Equal(customerID, customer.Data.CustomerID);
+            Assert.Equal(CustomerId, customer.Data.CustomerID);
         }
 
         [Fact]
@@ -268,21 +257,6 @@ namespace ProductStorage.Tests
         public async Task GetCustomers_ShouldReturnNull_InternalServerError()
         {
             // Arrange
-            var collectionMock = new List<Customer>()
-            {
-                new Customer()
-                {
-                    CustomerID = 1,
-                    Name = "Tester1",
-                    Phone = "0662892345"
-                },
-                new Customer()
-                {
-                    CustomerID = 2,
-                    Name = "Tester2",
-                    Phone = "09839472382"
-                }
-            };
             _unitOfWorkMock.Setup(x => x.Customers.Select())
                 .ReturnsAsync(()=> null);
 

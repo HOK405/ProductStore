@@ -69,3 +69,4 @@ D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ProductStorage_WebApi\obj\Debug\net
 D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ProductStorage_WebApi\obj\Debug\net5.0\ProductStorage_WebApi.pdb
 D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ProductStorage_WebApi\obj\Debug\net5.0\ProductStorage_WebApi.genruntimeconfig.cache
 D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ProductStorage_WebApi\obj\Debug\net5.0\ref\ProductStorage_WebApi.dll
+D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ProductStorage_WebApi\bin\Debug\net5.0\AutoMapper.dll

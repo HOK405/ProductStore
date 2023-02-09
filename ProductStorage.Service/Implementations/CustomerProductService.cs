@@ -2,43 +2,48 @@
 using ProductStorage.Service.Response;
 using ProductStorage.Service.Enum;
 using ProductStorage.DAL.Interfaces;
-using ProductStorage.Service.ViewModels.CustomerProduct;
+using ProductStorage.Service.Models.CustomerProduct;
 using ProductStorage.Service.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.Design;
+using AutoMapper;
+using ProductStorage.Service.Models;
 
 namespace ProductStorage.Service.Implementations
 {
     public class CustomerProductService : ICustomerProductService
     {
-        private IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly Mapper _customerProductMapper;
 
         public CustomerProductService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+            
+            var configCustomerProduct = new MapperConfiguration(cfg => cfg.CreateMap<CustomerProduct, CustomerProductModel>().ReverseMap());
+            _customerProductMapper = new Mapper(configCustomerProduct);
         }
 
-        public async Task<IBaseResponse<bool>> Create(CustomerProduct _customerProductModel)
+        public async Task<IBaseResponse<bool>> Create(CustomerProductModel customerProductModel)
         {
             var baseResponse = new BaseResponse<bool>();
             try
             {
-                var customerProduct = new CustomerProduct()
-                {
-                    CustomerId = _customerProductModel.CustomerId,
-                    ProductId = _customerProductModel.ProductId,
-                    Amount = _customerProductModel.Amount,
-                };
+                var customerProduct = _customerProductMapper.Map<CustomerProductModel, CustomerProduct>(customerProductModel);
+                
+                // var customerProduct = new CustomerProduct()
+                // {
+                //     CustomerId = _customerProductModel.CustomerId,
+                //     ProductId = _customerProductModel.ProductId,
+                //     Amount = _customerProductModel.Amount,
+                // };
+                
                 baseResponse.Data = await _unitOfWork.CustomerProducts.Create(customerProduct);
                 return baseResponse;
             }
             catch (Exception ex)
             {
-
                 return new BaseResponse<bool>()
                 {
                     Description = $"[Create customer] : {ex.Message}",
@@ -47,28 +52,30 @@ namespace ProductStorage.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<CustomerProduct>> GetByIds(int customerId, int productId)
+        public async Task<IBaseResponse<CustomerProductModel>> GetByIds(int customerId, int productId)
         {
-            var baseResponse = new BaseResponse<CustomerProduct>();
-
+            var baseResponse = new BaseResponse<CustomerProductModel>();
             try
             {
-                var customer = await _unitOfWork.CustomerProducts.GetByIds(customerId, customerId);
+                var customerProduct = await _unitOfWork.CustomerProducts.GetByIds(customerId, customerId);
 
-                if (customer == null)
+                if (customerProduct == null)
                 {
                     baseResponse.Description = "CustomerProduct record not found";
                     baseResponse.StatusCode = StatusCode.UserNotFound;
+
                     return baseResponse;
                 }
-                baseResponse.Data = customer;
+                
+                var customerModel = _customerProductMapper.Map<CustomerProduct, CustomerProductModel>(customerProduct);
+                baseResponse.Data = customerModel;
                 baseResponse.StatusCode = StatusCode.OK;
 
                 return baseResponse;
             }
             catch (Exception ex)
             {
-                return new BaseResponse<CustomerProduct>()
+                return new BaseResponse<CustomerProductModel>()
                 {
                     Description = $"[GetCustomerProductByIds] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
@@ -99,32 +106,34 @@ namespace ProductStorage.Service.Implementations
                 {
                     Description = $"[DeleteCustomerProduct] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
-                };
+                };  
             }
         }
 
-        public async Task<IBaseResponse<IEnumerable<CustomerProduct>>> GetByCustomerId(int id)
+        public async Task<IBaseResponse<IEnumerable<CustomerProductModel>>> GetByCustomerId(int id)
         {
-            var baseResponse = new BaseResponse<IEnumerable<CustomerProduct>>();
+            var baseResponse = new BaseResponse<IEnumerable<CustomerProductModel>>();
 
             try
             {
-                var customerProduct = await _unitOfWork.CustomerProducts.GetByCustomerId(id);
+                var customerProducts = await _unitOfWork.CustomerProducts.GetByCustomerId(id);
 
-                if (customerProduct.Count == 0)
+                if (customerProducts.Count == 0)
                 {
                     baseResponse.Description = "0 items found";
                     baseResponse.StatusCode = StatusCode.UserNotFound;
                     return baseResponse;
                 }
-                baseResponse.Data = customerProduct;
+                
+                var customerProductModel = _customerProductMapper.Map<List<CustomerProduct>, List<CustomerProductModel>>(customerProducts);
+                baseResponse.Data = customerProductModel;
                 baseResponse.StatusCode = StatusCode.OK;
 
                 return baseResponse;
             }
             catch (Exception ex)
             {
-                return new BaseResponse<IEnumerable<CustomerProduct>>()
+                return new BaseResponse<IEnumerable<CustomerProductModel>>()
                 {
                     Description = $"[GetCustomerById] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
@@ -132,28 +141,30 @@ namespace ProductStorage.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<IEnumerable<CustomerProduct>>> GetByProductId(int id)
+        public async Task<IBaseResponse<IEnumerable<CustomerProductModel>>> GetByProductId(int id)
         {
-            var baseResponse = new BaseResponse<IEnumerable<CustomerProduct>>();
+            var baseResponse = new BaseResponse<IEnumerable<CustomerProductModel>>();
 
             try
             {
-                var customerProduct = await _unitOfWork.CustomerProducts.GetByProductId(id);
+                var customerProducts = await _unitOfWork.CustomerProducts.GetByProductId(id);
 
-                if (customerProduct.Count == 0)
+                if (customerProducts.Count == 0)
                 {
                     baseResponse.Description = "0 items found";
                     baseResponse.StatusCode = StatusCode.UserNotFound;
                     return baseResponse;
                 }
-                baseResponse.Data = customerProduct;
+                
+                var customerProductModel = _customerProductMapper.Map<List<CustomerProduct>, List<CustomerProductModel>>(customerProducts);
+                baseResponse.Data = customerProductModel;
                 baseResponse.StatusCode = StatusCode.OK;
 
                 return baseResponse;
             }
             catch (Exception ex)
             {
-                return new BaseResponse<IEnumerable<CustomerProduct>> ()
+                return new BaseResponse<IEnumerable<CustomerProductModel>> ()
                 {
                     Description = $"[GetCustomerById] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
@@ -161,9 +172,9 @@ namespace ProductStorage.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<IEnumerable<CustomerProduct>>> GetCustomerProducts()
+        public async Task<IBaseResponse<IEnumerable<CustomerProductModel>>> GetCustomerProducts()
         {
-            var baseResponse = new BaseResponse<IEnumerable<CustomerProduct>>();
+            var baseResponse = new BaseResponse<IEnumerable<CustomerProductModel>>();
 
             try
             {
@@ -176,14 +187,15 @@ namespace ProductStorage.Service.Implementations
                     return baseResponse;
                 }
 
-                baseResponse.Data = customerProducts;
+                var customerProductModel = _customerProductMapper.Map<List<CustomerProduct>, List<CustomerProductModel>>(customerProducts);
+                baseResponse.Data = customerProductModel;
                 baseResponse.StatusCode = StatusCode.OK;
 
                 return baseResponse;
             }
             catch (Exception ex)
             {
-                return new BaseResponse<IEnumerable<CustomerProduct>>()
+                return new BaseResponse<IEnumerable<CustomerProductModel>>()
                 {
                     Description = $"[GetCustomers] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError

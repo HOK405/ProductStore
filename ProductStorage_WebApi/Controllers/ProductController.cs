@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
+using ProductStorage.Service.Models.Product;
 
 namespace ProductStorage_WebApi.Controllers
 {
@@ -26,7 +27,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var response = (BaseResponse<IEnumerable<Product>>)await _productService.GetProducts();
+            var response = (BaseResponse<IEnumerable<ProductModel>>)await _productService.GetProducts();
             if (response.Data == null)
             {
                 return NotFound(response.Description);
@@ -37,7 +38,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var response = (BaseResponse<Product>)await _productService.GetById(id);
+            var response = (BaseResponse<ProductModel>)await _productService.GetById(id);
             if (response.Data == null)
             {
                 return NotFound(response.Description);
@@ -48,7 +49,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet("[action]/{name}")]
         public async Task<IActionResult> GetByName(string name)
         {
-            var response = (BaseResponse<Product>)await _productService.GetByName(name);
+            var response = (BaseResponse<ProductModel>)await _productService.GetByName(name);
             if (response.Data == null)
             {
                 return NotFound(response.Description);
@@ -57,9 +58,9 @@ namespace ProductStorage_WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Product _product)
+        public async Task<IActionResult> Post(ProductModel product)
         {
-            var response = (BaseResponse<bool>)await _productService.Create(_product);
+            var response = (BaseResponse<bool>)await _productService.Create(product);
 
             if (response.Data)
             {
@@ -87,9 +88,9 @@ namespace ProductStorage_WebApi.Controllers
         }
 
         [HttpPatch("{id}")]
-        public async Task<IActionResult> Patch(int id, Product _product)
+        public async Task<IActionResult> Patch(int id, ProductModel product)
         {
-            var response = (BaseResponse<bool>)await _productService.Update(id, _product);
+            var response = (BaseResponse<bool>)await _productService.Update(id, product);
 
             if (response.Data)
             {

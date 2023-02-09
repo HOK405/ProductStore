@@ -28,7 +28,7 @@ namespace ProductStorage.DAL.EF
                 .WithMany(c => c.Customers)
                 .UsingEntity<CustomerProduct>(
                    j => j
-                    .HasOne(pt => pt.Pruduct)
+                    .HasOne(pt => pt.Product)
                     .WithMany(t => t.CustomerProducts)
                     .HasForeignKey(pt => pt.ProductId),
                 j => j

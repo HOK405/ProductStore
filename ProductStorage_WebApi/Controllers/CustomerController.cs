@@ -1,15 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Net;
 using ProductStorage.Service.Interfaces;
-using ProductStorage.DAL.Entities;
 using System.Threading.Tasks;
-using ProductStorage.Service.Implementations;
+using ProductStorage.DAL.Entities;
 using ProductStorage.Service.Response;
-using ProductStorage.Service.Enum;
-using Microsoft.AspNetCore.Cors;
+using ProductStorage.Service.Models.Customer;
 
 namespace ProductStorage_WebApi.Controllers
 {
@@ -27,7 +22,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var response = (BaseResponse<IEnumerable<Customer>>)await _customerService.GetCustomers();
+            var response = (BaseResponse<IEnumerable<CustomerModel>>)await _customerService.GetCustomers();
             if (response.Data == null)
             {
                 return NotFound(response.Description);
@@ -38,7 +33,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var response = (BaseResponse<Customer>)await _customerService.GetById(id);
+            var response = (BaseResponse<CustomerModel>)await _customerService.GetById(id);
             if (response.Data == null)
             {
                 return NotFound(response.Description);
@@ -49,7 +44,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet("[action]/{name}")]
         public async Task<IActionResult> GetByName(string name)
         {
-            var response = (BaseResponse<Customer>)await _customerService.GetByName(name);
+            var response = (BaseResponse<CustomerModel>)await _customerService.GetByName(name);
             if (response.Data == null)
             {
                 return NotFound(response.Description);
@@ -58,9 +53,9 @@ namespace ProductStorage_WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]Customer _customer)
+        public async Task<IActionResult> Post([FromBody]CustomerModel customer)
         {
-            var response = (BaseResponse<bool>) await _customerService.Create(_customer);
+            var response = (BaseResponse<bool>) await _customerService.Create(customer);
 
             if (response.Data)
             {
@@ -90,9 +85,9 @@ namespace ProductStorage_WebApi.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Patch(int id, Customer _product)
+        public async Task<IActionResult> Patch(int id, CustomerModel product)
         {
-            var response = (BaseResponse<bool>)await _customerService.Update(id, _product);
+            var response = (BaseResponse<bool>)await _customerService.Update(id, product);
 
             if (response.Data)
             {

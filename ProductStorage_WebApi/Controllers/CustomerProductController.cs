@@ -6,10 +6,11 @@ using System.Net;
 using ProductStorage.Service.Interfaces;
 using System.Threading.Tasks;
 using ProductStorage.Service.Implementations;
-using ProductStorage.Service.ViewModels.CustomerProduct;
+using ProductStorage.Service.Models.CustomerProduct;
 using ProductStorage.DAL.Entities;
 using ProductStorage.Service.Response;
 using Microsoft.AspNetCore.Cors;
+using CustomerProductModel = ProductStorage.Service.Models.CustomerProduct.CustomerProductModel;
 
 namespace ProductStorage_WebApi.Controllers
 {
@@ -25,7 +26,7 @@ namespace ProductStorage_WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(CustomerProduct _customerProduct)
+        public async Task<IActionResult> Post(CustomerProductModel _customerProduct)
         {
             var response = (BaseResponse<bool>)await _customerProductService.Create(_customerProduct);
 
@@ -57,7 +58,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var response = (BaseResponse<IEnumerable<CustomerProduct>>)await _customerProductService.GetCustomerProducts();
+            var response = (BaseResponse<IEnumerable<CustomerProductModel>>)await _customerProductService.GetCustomerProducts();
             if (response.Data == null)
             {
                 return NotFound(response.Description);
@@ -81,7 +82,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet("{customerId}/{productId}")]
         public async Task<IActionResult> Get(int customerId, int productId)
         {
-            var response = (BaseResponse<CustomerProduct>)await _customerProductService.GetByIds(customerId, productId);
+            var response = (BaseResponse<CustomerProductModel>)await _customerProductService.GetByIds(customerId, productId);
 
             if (response.Data == null)
             {
@@ -93,7 +94,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet("[action]/{id}")]
         public async Task<IActionResult> GetByCustomerId(int id)
         {
-            var response = (BaseResponse<IEnumerable<CustomerProduct>>)await _customerProductService.GetByCustomerId(id);
+            var response = (BaseResponse<IEnumerable<CustomerProductModel>>)await _customerProductService.GetByCustomerId(id);
             if (response.Data == null)
             {
                 return NotFound(response.Description);
@@ -104,7 +105,7 @@ namespace ProductStorage_WebApi.Controllers
         [HttpGet("[action]/{id}")]
         public async Task<IActionResult> GetByProductId(int id)
         {
-            var response = (BaseResponse<IEnumerable<CustomerProduct>>)await _customerProductService.GetByProductId(id);
+            var response = (BaseResponse<IEnumerable<CustomerProductModel>>)await _customerProductService.GetByProductId(id);
             if (response.Data == null)
             {
                 return NotFound(response.Description);

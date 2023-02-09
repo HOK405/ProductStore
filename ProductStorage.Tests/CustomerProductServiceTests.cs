@@ -1,16 +1,11 @@
-﻿using Castle.Core.Resource;
-using Moq;
+﻿using Moq;
 using ProductStorage.DAL.Entities;
 using ProductStorage.DAL.Interfaces;
-using ProductStorage.DAL.Repositories;
 using ProductStorage.Service.Implementations;
-using ProductStorage.Service.ViewModels.CustomerProduct;
-using System;
+using ProductStorage.Service.Models.CustomerProduct;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 using Xunit;
 
 namespace ProductStorage.Tests
@@ -30,7 +25,7 @@ namespace ProductStorage.Tests
         public async Task Create_ShouldReturnTrue_WhenPassedDataIsOk()
         {
             // Arrange
-            var customerProductMock = new CustomerProduct()
+            var customerProductMock = new CustomerProductModel()
             {
                 CustomerId = 1,
                 ProductId = 1,

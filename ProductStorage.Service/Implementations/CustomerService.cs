@@ -1,36 +1,41 @@
 ﻿using ProductStorage.DAL.Entities;
 using ProductStorage.Service.Enum;
 using ProductStorage.DAL.Interfaces;
-using ProductStorage.DAL.Repositories;
 using ProductStorage.Service.Response;
 using ProductStorage.Service.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using ProductStorage.Service.Models.Customer;
 
 namespace ProductStorage.Service.Implementations
 {
     public class CustomerService : ICustomerService
     {
         private IUnitOfWork _unitOfWork;
-
+        private readonly Mapper _сustomerMapper;
         public CustomerService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+            
+            var configCustomer = new MapperConfiguration(cfg => cfg.CreateMap<Customer, CustomerModel>().ReverseMap());
+            _сustomerMapper = new Mapper(configCustomer);
         }
 
-        public async Task<IBaseResponse<bool>> Create(Customer customerViewModel)
+        public async Task<IBaseResponse<bool>> Create(CustomerModel customerModel)
         {
             var baseResponse = new BaseResponse<bool>();
             try
             {
-                var customer = new Customer()
-                {
-                    Name = customerViewModel.Name,
-                    Phone = customerViewModel.Phone
-                };
+                var customer = _сustomerMapper.Map<CustomerModel, Customer>(customerModel);
+                
+                // var customer = new Customer()
+                // {
+                //     Name = customerModel.Name,
+                //     Phone = customerModel.Phone
+                // };
 
                 baseResponse.Data = await _unitOfWork.Customers.Create(customer);
                 return baseResponse;
@@ -73,29 +78,30 @@ namespace ProductStorage.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<IEnumerable<Customer>>> GetCustomers()
+        public async Task<IBaseResponse<IEnumerable<CustomerModel>>> GetCustomers()
         {
-            var baseResponse = new BaseResponse<IEnumerable<Customer>>();
+            var baseResponse = new BaseResponse<IEnumerable<CustomerModel>>();
 
             try
             {
                 var customers = await _unitOfWork.Customers.Select();
-
-                if (customers.Count == 0)
+                var customerModels = _сustomerMapper.Map<List<Customer>, List<CustomerModel>>(customers);
+                
+                if (customerModels.Count == 0)
                 {
                     baseResponse.Description = "0 items found";
                     baseResponse.StatusCode = StatusCode.ZeroItemsFound;
                     return baseResponse;
                 }
 
-                baseResponse.Data = customers;
+                baseResponse.Data = customerModels;
                 baseResponse.StatusCode = StatusCode.OK;
 
                 return baseResponse;
             }
             catch (Exception ex)
             {
-                return new BaseResponse<IEnumerable<Customer>>()
+                return new BaseResponse<IEnumerable<CustomerModel>>()
                 {
                     Description = $"[GetCustomers] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
@@ -103,9 +109,9 @@ namespace ProductStorage.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<Customer>> GetById(int id)
+        public async Task<IBaseResponse<CustomerModel>> GetById(int id)
         {
-            var baseResponse = new BaseResponse<Customer>();
+            var baseResponse = new BaseResponse<CustomerModel>();
 
             try
             {
@@ -116,15 +122,17 @@ namespace ProductStorage.Service.Implementations
                     baseResponse.Description = "Customer not found";
                     baseResponse.StatusCode = StatusCode.UserNotFound;
                     return baseResponse;
-                }                      
-                baseResponse.Data = customer;
+                }
+
+                var customerModel = _сustomerMapper.Map<Customer, CustomerModel>(customer);
+                baseResponse.Data = customerModel;
                 baseResponse.StatusCode = StatusCode.OK;
 
                 return baseResponse;
             }
             catch (Exception ex)
             {
-                return new BaseResponse<Customer>()
+                return new BaseResponse<CustomerModel>()
                 {
                     Description = $"[GetCustomerById] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
@@ -132,28 +140,29 @@ namespace ProductStorage.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<Customer>> GetByName(string name)
+        public async Task<IBaseResponse<CustomerModel>> GetByName(string name)
         {
-            var baseResponse = new BaseResponse<Customer>();
+            var baseResponse = new BaseResponse<CustomerModel>();
 
             try
             {
                 var customer = await _unitOfWork.Customers.GetByName(name);
-
                 if (customer == null) 
                 {
                     baseResponse.Description = "Customer not found";
                     baseResponse.StatusCode = StatusCode.UserNotFound;
                     return baseResponse;
                 }                
-                baseResponse.Data = customer;
+                
+                var customerModel = _сustomerMapper.Map<Customer, CustomerModel>(customer);
+                baseResponse.Data = customerModel;
                 baseResponse.StatusCode = StatusCode.OK;
 
                 return baseResponse;
             }
             catch (Exception ex)
             {
-                return new BaseResponse<Customer>()
+                return new BaseResponse<CustomerModel>()
                 {
                     Description = $"[GetCustomerByName] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
@@ -161,7 +170,7 @@ namespace ProductStorage.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<bool>> Update(int id, Customer newEntity)
+        public async Task<IBaseResponse<bool>> Update(int id, CustomerModel customerModel)
         {
             var baseResponse = new BaseResponse<bool>();
 
@@ -175,13 +184,15 @@ namespace ProductStorage.Service.Implementations
                     baseResponse.StatusCode = StatusCode.UserNotFound;
                     return baseResponse;
                 }
-                if (newEntity == null)
+                if (customerModel == null)
                 {
                     baseResponse.Description = "New entity is null";
                     baseResponse.StatusCode = StatusCode.EntityIsNull;
                     return baseResponse;
                 }
 
+                var newEntity = _сustomerMapper.Map<CustomerModel, Customer>(customerModel);
+                
                 baseResponse.Data = await _unitOfWork.Customers.Update(customer.CustomerID, newEntity);
                 return baseResponse;
             }
