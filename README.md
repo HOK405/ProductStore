@@ -1,3 +1,8 @@
 # ProductStore
-Product  Storage project based on multitier architecture
-Entity Framework, AutoMapper, unit testing, console client
+Product  Storage project, based on `multitier` architecture.
+## Technologies used:
+* Entity Framework
+* AutoMapper
+* Unit tests
+* Console client
+

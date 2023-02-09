@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LTal0G1GUXEMt5qaAjA43RRw6800esE4/EV1C6gwrxKdYiAAJylB1WH1u2G3juxBrc+remUhMX9V036UAcITdA==",
+  "dgSpecHash": "dOyiumLGhgsgUbTE0PzQjTnZrieXPzL+MHkbmLfEwn2A4YYzn7qXm+YYBtMuRXn4HZJYBKSuOrJ+P2E9GnxDiQ==",
   "success": true,
-  "projectFilePath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
+  "projectFilePath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\boghd\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",

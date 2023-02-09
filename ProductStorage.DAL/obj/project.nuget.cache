@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i7IKrT07oEi52rZlx9Ln5DsT64y/T4f80PK+HCZWCPMy5fSBACT8sHY1FmlhlzvjJ8dTnyAlhqBN84NHLc22Ug==",
+  "dgSpecHash": "oSB/xpxI/JEvD82LMU2KEgpP19DiiITY0rmj/j8TFbBMAPtHhO/H+y5d4FGAiUYSpKGIz9QkXcfN/NkAoOsb4w==",
   "success": true,
-  "projectFilePath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
+  "projectFilePath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\boghd\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

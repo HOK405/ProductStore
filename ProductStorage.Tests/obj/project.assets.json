@@ -9211,11 +9211,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Tests\\ProductStorage.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Tests\\ProductStorage.Tests.csproj",
       "projectName": "ProductStorage.Tests",
-      "projectPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Tests\\ProductStorage.Tests.csproj",
+      "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Tests\\ProductStorage.Tests.csproj",
       "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
-      "outputPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Tests\\obj\\",
+      "outputPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio\\Packages\\NuGetPackages"
@@ -9236,8 +9236,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj": {
-              "projectPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj"
+            "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj": {
+              "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj"
             }
           }
         }

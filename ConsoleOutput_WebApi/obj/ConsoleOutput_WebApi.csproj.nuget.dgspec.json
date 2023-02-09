@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj": {}
+    "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj": {}
   },
   "projects": {
-    "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj": {
+    "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
         "projectName": "ConsoleOutput_WebApi",
-        "projectPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
+        "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\ConsoleOutput_WebApi.csproj",
         "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
-        "outputPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ConsoleOutput_WebApi\\obj\\",
+        "outputPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ConsoleOutput_WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio\\Packages\\NuGetPackages"

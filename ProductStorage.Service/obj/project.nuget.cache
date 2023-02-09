@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YmKjxJdhhNGRsXVNURcjlqUrlLUWHek4LUJgZ8iZ1oYggTwpCnNuh83c4EsUbt1h7LgS+q46z0fGbpfhtoBAvQ==",
+  "dgSpecHash": "zgdPQnAQPMPEAeleYxFRhTFymA1DTziDp8JUvJKgOvHcQRzt7aLZTSj2ENiIjVMdjvYdxewgIho3mHHXP01aeA==",
   "success": true,
-  "projectFilePath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj",
+  "projectFilePath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\boghd\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

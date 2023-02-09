@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4nsUzpysX6rA2Zfr0VufuqOIhFS1jj6pUCQ2YFZvgOsTaCtobINNna/Ry084GDufUbZRsq6uCTLU8BdYKN5RMg==",
+  "dgSpecHash": "LGSI9fDABQ3lNU9iwVpIAx6FupcGEUYdItHmA/iXrnyUkR+V4aRdfZaBOuYAdg/vtpsUGAZdCOTPpN5YWLAnzQ==",
   "success": true,
-  "projectFilePath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Tests\\ProductStorage.Tests.csproj",
+  "projectFilePath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Tests\\ProductStorage.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\boghd\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\boghd\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

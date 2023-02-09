@@ -16,3 +16,21 @@ D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ProductStorage.Service\bin\Debug\ne
 D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.DAL.pdb
 D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.csproj.CopyComplete
 D:\HOKAIDO\KPI\5 SEM\.NET Web\ProductStorage\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.genruntimeconfig.cache
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.deps.json
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.runtimeconfig.json
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.runtimeconfig.dev.json
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.dll
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.Service.pdb
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.DAL.dll
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\bin\Debug\net5.0\ProductStorage.DAL.pdb
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.csproj.AssemblyReference.cache
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.AssemblyInfoInputs.cache
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.AssemblyInfo.cs
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.csproj.CoreCompileInputs.cache
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.csproj.CopyComplete
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.dll
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\refint\ProductStorage.Service.dll
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.pdb
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ProductStorage.Service.genruntimeconfig.cache
+C:\Users\boghd\Desktop\ProductStore\ProductStorage.Service\obj\Debug\net5.0\ref\ProductStorage.Service.dll

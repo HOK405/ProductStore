@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj": {}
+    "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj": {}
   },
   "projects": {
-    "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.DAL\\ProductStorage.DAL.csproj": {
+    "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
         "projectName": "ProductStorage.DAL",
-        "projectPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
+        "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj",
         "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
-        "outputPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.DAL\\obj\\",
+        "outputPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio\\Packages\\NuGetPackages"
@@ -89,14 +89,14 @@
         }
       }
     },
-    "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj": {
+    "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj",
+        "projectUniqueName": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj",
         "projectName": "ProductStorage.Service",
-        "projectPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\ProductStorage.Service.csproj",
+        "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\ProductStorage.Service.csproj",
         "packagesPath": "C:\\Users\\boghd\\.nuget\\packages\\",
-        "outputPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.Service\\obj\\",
+        "outputPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio\\Packages\\NuGetPackages"
@@ -117,8 +117,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.DAL\\ProductStorage.DAL.csproj": {
-                "projectPath": "D:\\HOKAIDO\\KPI\\5 SEM\\.NET Web\\ProductStorage\\ProductStorage.DAL\\ProductStorage.DAL.csproj"
+              "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj": {
+                "projectPath": "C:\\Users\\boghd\\Desktop\\ProductStore\\ProductStorage.DAL\\ProductStorage.DAL.csproj"
               }
             }
           }
